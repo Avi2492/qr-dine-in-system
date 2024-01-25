@@ -1,11 +1,18 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Layout from "./page/Layout";
 
 const App = () => {
   return (
-    <h1 className="text-xl flex justify-center items-center h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-      Hello, I am QR based Order Place System 👨‍💻 Lets Build Together and I am
-      Here to reduce the Queues on Restaurents
-    </h1>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Layout />} />
+      </Routes>
+      <Footer />
+    </>
   );
 };
 
